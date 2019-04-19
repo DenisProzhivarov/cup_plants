@@ -344,37 +344,19 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.container--sm {
-  width: 155px;
-  min-height: 440px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
 .cups {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
 
 .cup {
   background-color: #fff;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -385,14 +367,14 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 360px;
-  height: 440px;
+  width: 100%;
+  min-height: 440px;
   margin-left: 30px;
   border-radius: 3px;
   padding: 40px;
-  -webkit-transition: all .5s easy-in;
-  -o-transition: all .5s easy-in;
-  transition: all .5s easy-in; }
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease; }
   .cup:hover, .cup:focus, .cup:active {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
@@ -400,11 +382,17 @@ body {
     margin: 0; }
   .cup:nth-child(2) {
     padding: 50px;
-    height: 500px; }
+    min-height: 500px; }
   .cup__price {
+    width: 200px;
     font-size: 70px;
     color: #02995b;
-    font-weight: 800; }
+    font-weight: 800;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; }
     .cup__price:before {
       content: "$"; }
     .cup__price--mr {
@@ -424,6 +412,9 @@ body {
     margin: 0;
     font-size: 20px;
     text-align: center;
-    line-height: 26px; }
+    line-height: 26px;
+    width: 80%;
+    height: 78px;
+    overflow: hidden; }
   .cup__any:before {
     content: "$"; }
